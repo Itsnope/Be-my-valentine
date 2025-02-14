@@ -2,13 +2,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
   background: linear-gradient(135deg, #ff6f61, #ffcccb);
   font-family: 'Quicksand', sans-serif;
   flex-direction: column;
   text-align: center;
-  overflow: hidden;
+  padding: 20px;
 }
 
 h1 {
@@ -17,6 +17,7 @@ h1 {
   font-family: 'Pacifico', cursive;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   animation: float 3s ease-in-out infinite;
+  margin-top: 20px;
 }
 
 @keyframes float {
@@ -29,7 +30,7 @@ h1 {
 }
 
 .buttons {
-  margin-top: 30px;
+  margin: 30px 0;
 }
 
 .yes-button, .no-button {
@@ -64,11 +65,14 @@ h1 {
   background-color: #e53935;
 }
 
+.gif_container {
+  margin: 20px 0;
+}
+
 .gif_container img {
   max-width: 100%;
   height: auto;
   border-radius: 15px;
-  margin-top: 30px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   animation: pulse 2s infinite;
 }
@@ -79,5 +83,16 @@ h1 {
   }
   50% {
       transform: scale(1.05);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  
+  .yes-button, .no-button {
+    font-size: 1.2em;
+    padding: 12px 24px;
   }
 }
